@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   get '/users/new', to: 'users#new'
   # 新規登録を行うためのルーティング
   post '/users', to: 'users#create'
+  # 削除を実行するためのルーティング
+  delete '/users/:id', to: 'users#destroy'
 end

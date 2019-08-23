@@ -11,6 +11,11 @@ class UsersController < ApplicationController
   def create
      User.create(user_params)
   end
+  # 削除を実行するためのアクション
+  def destroy
+    user = User.find(params[:id])
+    user.delete
+  end
 
   private
 
